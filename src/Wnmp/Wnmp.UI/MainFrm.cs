@@ -64,7 +64,8 @@ namespace Wnmp.UI
 
         protected override CreateParams CreateParams
         {
-            get {
+            get
+            {
                 CreateParams cp = base.CreateParams;
                 cp.Style &= ~0x00040000; // Remove WS_THICKFRAME (Disables resizing)
                 return cp;
@@ -88,7 +89,8 @@ namespace Wnmp.UI
                 $"{Program.StartupPath}\\nginx-bins\\{Properties.Settings.Default.NginxVersion}",
                 Misc.SYMBOLIC_LINK_FLAG.Directory, deleteOldLink);
 
-            Nginx = new NginxProgram($"{Program.StartupPath}\\nginx\\nginx.exe") {
+            Nginx = new NginxProgram($"{Program.StartupPath}\\nginx\\nginx.exe")
+            {
                 ProgLogSection = Log.LogSection.Nginx,
                 StartArgs = "",
                 StopArgs = "-s stop",
@@ -104,7 +106,8 @@ namespace Wnmp.UI
                 $"{Program.StartupPath}\\mariadb-bins\\{Properties.Settings.Default.MariaDBVersion}",
                 Misc.SYMBOLIC_LINK_FLAG.Directory, deleteOldLink);
 
-            MariaDB = new MariaDBProgram($"{Program.StartupPath}\\mariadb\\bin\\mysqld.exe") {
+            MariaDB = new MariaDBProgram($"{Program.StartupPath}\\mariadb\\bin\\mysqld.exe")
+            {
                 ProgLogSection = Log.LogSection.MariaDB,
                 StartArgs = "--install-manual Wnmp-MariaDB",
                 StopArgs = "/c sc delete Wnmp-MariaDB",
@@ -114,13 +117,14 @@ namespace Wnmp.UI
             };
         }
 
-        public void SetupPHP(bool deleteOldLink=false)
+        public void SetupPHP(bool deleteOldLink = false)
         {
             Misc.CreateRelativeLink($"{Program.StartupPath}\\php",
                 $"{Program.StartupPath}\\php-bins\\{Properties.Settings.Default.PHPVersion}",
                 Misc.SYMBOLIC_LINK_FLAG.Directory, deleteOldLink);
 
-            PHP = new PHPProgram($"{Program.StartupPath}\\php\\php-cgi.exe") {
+            PHP = new PHPProgram($"{Program.StartupPath}\\php\\php-cgi.exe")
+            {
                 ProgLogSection = Log.LogSection.PHP,
                 ConfDir = $"{Program.StartupPath}\\php\\",
                 LogDir = $"{Program.StartupPath}\\php\\logs\\",
@@ -136,7 +140,8 @@ namespace Wnmp.UI
                 return;
 
             string[] file = File.ReadAllLines(phpini);
-            for (int i = 0; i < file.Length; i++) {
+            for (int i = 0; i < file.Length; i++)
+            {
                 if (file[i].Contains("curl.cainfo") == false)
                     continue;
 
@@ -165,7 +170,8 @@ namespace Wnmp.UI
             cms.Items.Clear();
 
             FileInfo[] files = dirInfo.GetFiles(directory);
-            foreach (FileInfo file in files) {
+            foreach (FileInfo file in files)
+            {
                 cms.Items.Add(file.Name);
             }
         }
@@ -173,27 +179,33 @@ namespace Wnmp.UI
         private void SetupConfigAndLogMenuStrips()
         {
             NginxConfigContextMenuStrip = new ContextMenuStrip();
-            NginxConfigContextMenuStrip.ItemClicked += (s, e) => {
+            NginxConfigContextMenuStrip.ItemClicked += (s, e) =>
+            {
                 Misc.OpenFileEditor(Nginx.ConfDir + e.ClickedItem.ToString());
             };
             NginxLogContextMenuStrip = new ContextMenuStrip();
-            NginxLogContextMenuStrip.ItemClicked += (s, e) => {
+            NginxLogContextMenuStrip.ItemClicked += (s, e) =>
+            {
                 Misc.OpenFileEditor(Nginx.LogDir + e.ClickedItem.ToString());
             };
             MariaDBConfigContextMenuStrip = new ContextMenuStrip();
-            MariaDBConfigContextMenuStrip.ItemClicked += (s, e) => {
+            MariaDBConfigContextMenuStrip.ItemClicked += (s, e) =>
+            {
                 Misc.OpenFileEditor(MariaDB.ConfDir + e.ClickedItem.ToString());
             };
             MariaDBLogContextMenuStrip = new ContextMenuStrip();
-            MariaDBLogContextMenuStrip.ItemClicked += (s, e) => {
+            MariaDBLogContextMenuStrip.ItemClicked += (s, e) =>
+            {
                 Misc.OpenFileEditor(MariaDB.LogDir + e.ClickedItem.ToString());
             };
             PHPConfigContextMenuStrip = new ContextMenuStrip();
-            PHPConfigContextMenuStrip.ItemClicked += (s, e) => {
+            PHPConfigContextMenuStrip.ItemClicked += (s, e) =>
+            {
                 Misc.OpenFileEditor(PHP.ConfDir + e.ClickedItem.ToString());
             };
             PHPLogContextMenuStrip = new ContextMenuStrip();
-            PHPLogContextMenuStrip.ItemClicked += (s, e) => {
+            PHPLogContextMenuStrip.ItemClicked += (s, e) =>
+            {
                 Misc.OpenFileEditor(PHP.LogDir + e.ClickedItem.ToString());
             };
 
@@ -242,7 +254,8 @@ namespace Wnmp.UI
         private void SetupTrayMenu()
         {
             ToolStripMenuItem controlpanel = new(Language.Resource.WNMP_CONTROL_PANEL);
-            controlpanel.Click += (s, e) => {
+            controlpanel.Click += (s, e) =>
+            {
                 visiblecore = true;
                 base.SetVisibleCore(true);
                 WindowState = FormWindowState.Normal;
@@ -261,7 +274,8 @@ namespace Wnmp.UI
             cm.Items.Add("-");
             ni.ContextMenuStrip = cm;
             ni.Icon = Properties.Resources.logo;
-            ni.Click += (s, e) => {
+            ni.Click += (s, e) =>
+            {
                 visiblecore = true;
                 base.SetVisibleCore(true);
                 WindowState = FormWindowState.Normal;
@@ -272,7 +286,8 @@ namespace Wnmp.UI
 
         protected override void SetVisibleCore(bool value)
         {
-            if (visiblecore == false) {
+            if (visiblecore == false)
+            {
                 value = false;
                 if (!IsHandleCreated)
                     CreateHandle();
@@ -282,7 +297,8 @@ namespace Wnmp.UI
 
         public MainFrm()
         {
-            if (Properties.Settings.Default.StartMinimizedToTray) {
+            if (Properties.Settings.Default.StartMinimizedToTray)
+            {
                 Visible = false;
                 Hide();
             }
@@ -314,7 +330,8 @@ namespace Wnmp.UI
                 Log.Error(ex.Message);
             }
 
-            if (Properties.Settings.Default.StartMinimizedToTray) {
+            if (Properties.Settings.Default.StartMinimizedToTray)
+            {
                 visiblecore = false;
                 base.SetVisibleCore(false);
             }
@@ -511,7 +528,8 @@ namespace Wnmp.UI
 
         private void GetHTTPHeadersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HTTPHeadersFrm httpHeadersFrm = new() {
+            HTTPHeadersFrm httpHeadersFrm = new()
+            {
                 StartPosition = FormStartPosition.CenterParent
             };
             httpHeadersFrm.Show(this);
@@ -519,7 +537,8 @@ namespace Wnmp.UI
 
         private void HostToIPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HostToIPFrm hostToIPFrm = new() {
+            HostToIPFrm hostToIPFrm = new()
+            {
                 StartPosition = FormStartPosition.CenterParent
             };
             hostToIPFrm.Show(this);
@@ -542,7 +561,8 @@ namespace Wnmp.UI
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var aboutFrm = new AboutFrm() {
+            var aboutFrm = new AboutFrm()
+            {
                 StartPosition = FormStartPosition.CenterParent
             };
             aboutFrm.ShowDialog(this);
@@ -555,10 +575,13 @@ namespace Wnmp.UI
 
         private static void SetRunningStatusLabel(Label label, bool running)
         {
-            if (running) {
+            if (running)
+            {
                 label.Text = "✓";
                 label.ForeColor = Color.Green;
-            } else {
+            }
+            else
+            {
                 label.Text = "X";
                 label.ForeColor = Color.DarkRed;
             }
@@ -592,7 +615,11 @@ namespace Wnmp.UI
         {
             Misc.StartProcessAsync("explorer.exe", Program.StartupPath);
         }
-
+        private void wwwDirButton_Click(object sender, EventArgs e)
+        {
+            string rootDirectory = Path.GetPathRoot(Program.StartupPath);
+            Misc.StartProcessAsync("explorer.exe", rootDirectory + "www");
+        }
         private void MainFrm_Shown(object sender, EventArgs e)
         {
             if (!Properties.Settings.Default.MariaDBIsSetup || !Directory.Exists($"{Program.StartupPath}\\mariadb\\data"))
@@ -613,10 +640,13 @@ namespace Wnmp.UI
 
         private void MainFrm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing && Properties.Settings.Default.MinimizeInsteadOfClosing) {
+            if (e.CloseReason == CloseReason.UserClosing && Properties.Settings.Default.MinimizeInsteadOfClosing)
+            {
                 e.Cancel = true;
                 Hide();
-            } else {
+            }
+            else
+            {
                 Properties.Settings.Default.Save();
             }
         }
