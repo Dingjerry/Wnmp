@@ -223,12 +223,12 @@
             // 
             logRichTextBox.BackColor = System.Drawing.Color.White;
             logRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            logRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            logRichTextBox.Location = new System.Drawing.Point(0, 425);
+            logRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            logRichTextBox.Location = new System.Drawing.Point(0, 404);
             logRichTextBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             logRichTextBox.Name = "logRichTextBox";
             logRichTextBox.ReadOnly = true;
-            logRichTextBox.Size = new System.Drawing.Size(1186, 242);
+            logRichTextBox.Size = new System.Drawing.Size(1186, 263);
             logRichTextBox.TabIndex = 61;
             logRichTextBox.Text = "";
             // 
@@ -324,7 +324,7 @@
             // 
             // nginxLogButton
             // 
-            nginxLogButton.Location = new System.Drawing.Point(772, 85);
+            nginxLogButton.Location = new System.Drawing.Point(772, 83);
             nginxLogButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             nginxLogButton.Name = "nginxLogButton";
             nginxLogButton.Size = new System.Drawing.Size(91, 51);
@@ -369,8 +369,8 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(145, 254);
+            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label8.Location = new System.Drawing.Point(145, 256);
             label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(52, 25);
@@ -380,7 +380,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             label7.Location = new System.Drawing.Point(145, 176);
             label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label7.Name = "label7";
@@ -391,9 +391,9 @@
             // phprunning
             // 
             phprunning.AutoSize = true;
-            phprunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            phprunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             phprunning.ForeColor = System.Drawing.Color.DarkRed;
-            phprunning.Location = new System.Drawing.Point(41, 250);
+            phprunning.Location = new System.Drawing.Point(41, 254);
             phprunning.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             phprunning.Name = "phprunning";
             phprunning.Size = new System.Drawing.Size(31, 29);
@@ -403,9 +403,9 @@
             // mariadbrunning
             // 
             mariadbrunning.AutoSize = true;
-            mariadbrunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            mariadbrunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             mariadbrunning.ForeColor = System.Drawing.Color.DarkRed;
-            mariadbrunning.Location = new System.Drawing.Point(41, 168);
+            mariadbrunning.Location = new System.Drawing.Point(41, 174);
             mariadbrunning.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             mariadbrunning.Name = "mariadbrunning";
             mariadbrunning.Size = new System.Drawing.Size(31, 29);
@@ -416,7 +416,7 @@
             // 
             optionsLabel.AutoSize = true;
             optionsLabel.BackColor = System.Drawing.Color.Transparent;
-            optionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            optionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             optionsLabel.Location = new System.Drawing.Point(300, 43);
             optionsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             optionsLabel.Name = "optionsLabel";
@@ -427,8 +427,8 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(145, 94);
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            label4.Location = new System.Drawing.Point(145, 96);
             label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(62, 25);
@@ -439,7 +439,7 @@
             // 
             applicationLabel.AutoSize = true;
             applicationLabel.BackColor = System.Drawing.Color.Transparent;
-            applicationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            applicationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             applicationLabel.Location = new System.Drawing.Point(145, 43);
             applicationLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             applicationLabel.Name = "applicationLabel";
@@ -450,9 +450,9 @@
             // nginxrunning
             // 
             nginxrunning.AutoSize = true;
-            nginxrunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            nginxrunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             nginxrunning.ForeColor = System.Drawing.Color.DarkRed;
-            nginxrunning.Location = new System.Drawing.Point(41, 86);
+            nginxrunning.Location = new System.Drawing.Point(41, 94);
             nginxrunning.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             nginxrunning.Name = "nginxrunning";
             nginxrunning.Size = new System.Drawing.Size(31, 29);
@@ -463,7 +463,7 @@
             // 
             runningLabel.AutoSize = true;
             runningLabel.BackColor = System.Drawing.Color.Transparent;
-            runningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            runningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             runningLabel.Location = new System.Drawing.Point(11, 43);
             runningLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             runningLabel.Name = "runningLabel";
@@ -473,7 +473,7 @@
             // 
             // mariadbStopButton
             // 
-            mariadbStopButton.Location = new System.Drawing.Point(404, 165);
+            mariadbStopButton.Location = new System.Drawing.Point(404, 163);
             mariadbStopButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             mariadbStopButton.Name = "mariadbStopButton";
             mariadbStopButton.Size = new System.Drawing.Size(91, 51);
@@ -484,7 +484,7 @@
             // 
             // mariadbStartButton
             // 
-            mariadbStartButton.Location = new System.Drawing.Point(300, 165);
+            mariadbStartButton.Location = new System.Drawing.Point(300, 163);
             mariadbStartButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             mariadbStartButton.Name = "mariadbStartButton";
             mariadbStartButton.Size = new System.Drawing.Size(91, 51);
