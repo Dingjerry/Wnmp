@@ -583,7 +583,7 @@
             wwwDirButton.Name = "wwwDirButton";
             wwwDirButton.Size = new System.Drawing.Size(116, 60);
             wwwDirButton.TabIndex = 66;
-            wwwDirButton.Text = "Wnmp Directory";
+            wwwDirButton.Text = "WWW Directory";
             wwwDirButton.UseVisualStyleBackColor = true;
             wwwDirButton.Click += wwwDirButton_Click;
             // 
