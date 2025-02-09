@@ -143,14 +143,14 @@
             // hostToIPToolStripMenuItem
             // 
             hostToIPToolStripMenuItem.Name = "hostToIPToolStripMenuItem";
-            hostToIPToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
+            hostToIPToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             hostToIPToolStripMenuItem.Text = "Host To IP";
             hostToIPToolStripMenuItem.Click += HostToIPToolStripMenuItem_Click;
             // 
             // getHTTPHeadersToolStripMenuItem
             // 
             getHTTPHeadersToolStripMenuItem.Name = "getHTTPHeadersToolStripMenuItem";
-            getHTTPHeadersToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
+            getHTTPHeadersToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             getHTTPHeadersToolStripMenuItem.Text = "Get HTTP Headers";
             getHTTPHeadersToolStripMenuItem.Click += GetHTTPHeadersToolStripMenuItem_Click;
             // 
@@ -204,8 +204,8 @@
             // localhostToolStripMenuItem
             // 
             localhostToolStripMenuItem.Name = "localhostToolStripMenuItem";
-            localhostToolStripMenuItem.Size = new System.Drawing.Size(103, 28);
-            localhostToolStripMenuItem.Text = "localhost";
+            localhostToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            localhostToolStripMenuItem.Text = "&Localhost";
             localhostToolStripMenuItem.Click += LocalhostToolStripMenuItem_Click;
             // 
             // wnmpDirButton
